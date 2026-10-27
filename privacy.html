@@ -23,7 +23,7 @@
 
     <section class="card">
       <h2>2. 접근하는 Google 데이터</h2>
-      <p>앱은 백업 수행에 필요한 범위에서 소유자의 Google Drive 파일에 접근할 수 있습니다. 이 접근은 rclone을 통한 백업 파일의 생성, 조회, 갱신 및 삭제에만 사용됩니다.</p>
+      <p>앱은 기존 rclone 백업 객체를 계속 관리하기 위해 소유자의 Google Drive 전체에 대한 조회·생성·수정·삭제 권한을 요청합니다. 기술적으로 전체 Drive에 접근할 수 있지만, 실제 자동화는 지정된 NAS 백업 경로의 백업 파일을 생성, 조회, 갱신 및 삭제하는 용도로만 사용됩니다.</p>
     </section>
 
     <section class="card">
@@ -53,7 +53,7 @@
 
     <section class="card english">
       <h2>Privacy Policy — English Summary</h2>
-      <p>This private OAuth client is used solely by its owner to back up NAS data to the owner's Google Drive via rclone. It has no application server and does not independently collect, retain, sell, or share personal information or Google user data. Backup files move only between the owner's Mac and Google Drive. OAuth tokens and configuration remain on the owner's local device. Access can be revoked by deleting the local rclone configuration and removing the app connection from the Google Account.</p>
+      <p>This private OAuth client is used solely by its owner to back up NAS data to the owner's Google Drive via rclone. It requests full Google Drive read, create, update, and delete access so it can continue managing existing rclone backup objects. Although the authorization technically covers the entire Drive, the automation is used only for its designated NAS backup path. It has no application server and does not independently collect, retain, sell, or share personal information or Google user data. Backup files move only between the owner's Mac and Google Drive. OAuth tokens and configuration remain on the owner's local device. Access can be revoked by deleting the local rclone configuration and removing the app connection from the Google Account.</p>
     </section>
   </main>
 </body>
