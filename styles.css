@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #5f6b7d;
+  --line: #dfe5ee;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --shadow: 0 12px 32px rgba(23, 32, 51, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); }
+
+.container {
+  width: min(920px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+
+.hero { padding: 28px 0 40px; }
+.hero.compact { padding-bottom: 24px; }
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.35rem, 8vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.lead {
+  max-width: 720px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.card {
+  margin: 16px 0;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.card h2 { margin: 0 0 8px; font-size: 1.18rem; }
+.card p, .card ul { margin: 0; }
+.card ul { padding-left: 1.25rem; }
+.card li + li { margin-top: 8px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.grid .card { margin: 0; }
+
+.english { border-left: 4px solid var(--accent); }
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 28px;
+}
+.button {
+  display: inline-block;
+  padding: 11px 17px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.button:hover { background: var(--accent-dark); }
+.back { display: inline-block; margin-bottom: 10px; text-decoration: none; }
+
+@media (max-width: 720px) {
+  .container { padding: 36px 0; }
+  .grid { grid-template-columns: 1fr; }
+  .links { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --text: #e6edf3;
+    --muted: #9aa7b6;
+    --line: #30363d;
+    --shadow: none;
+  }
+}
